@@ -1,0 +1,139 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+.dec {
+    width: 70px;
+    height: 70px;
+}
+
+body {
+    position: fixed;
+    top: 2%;
+    left: 33%;
+    background: #949cdf;
+    background-image: url(Images/background.jpg);
+    background-attachment: fixed;
+}
+
+.page-title {
+    color: #583d72;
+    font-weight: normal;
+    text-align: center;
+    font-size: 6em;
+    text-shadow: 5px 5px rgba(0,0,0,.7)
+}
+
+.game-info-container {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.game-info {
+    color: #583d72;
+    font-size: 4em;
+    text-shadow: 3px 3px rgba(0,0,0,.7)
+}
+
+.memory-game {
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    background: #0a043c;
+}
+
+.memory-card {
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    border-radius: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    box-shadow: 8px 8px 8px rgba(0,0,0,.9);
+}
+
+.memory-card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.matched .front-face {
+    animation: dance 1s linear infinite 500ms;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.overlay-text {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: #433d3c;   
+}
+
+.overlay-text-small {
+    font-size: .3em;
+}
+
+.overlay-text.visible {
+    display: flex;
+    flex-direction: column;
+    animation: overlay-grow 500ms forwards;
+}
+
+@keyframes overlay-grow {
+    from {
+        background: rgba(0, 0, 0, 0);
+        font-size: 0;
+    }
+
+    to {
+        background: rgba(0, 0, 0, .8);
+        font-size: 10em;
+    }
+}
+
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: #495464;
+    backface-visibility: hidden;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
+
+.sidenav {
+    height: 100%;
+    width: 260px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: #583d72;
+    overflow-x: hidden;
+    padding-top: 20px;
+    color: #0a043c;
+    font-weight: normal;
+    text-align: center;
+    font-size: 2em;
+    text-shadow: 3px 3px rgba(0,0,0,.7)
+}

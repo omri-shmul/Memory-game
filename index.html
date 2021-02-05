@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Memory Game</title>
+    <link href="StyleSheet.css" rel="stylesheet" />
+
+    <script src="bootstrap-4.5.2-dist/js/jquery-3.5.1.js"></script>
+    <script src="bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
+    <link href="bootstrap-4.5.2-dist/css/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="sidenav">
+        <img class="dec" src="Images/balloon.svg" />
+        Noelle
+        <img class="dec" src="Images/wedding-bells.svg" />
+    </div>
+    <h1 class="page-title">Memory Card Game</h1>
+    <div id="start" class="overlay-text visible">
+        Click to Start
+    </div>
+    <div id="game-over-text" class="overlay-text">
+        GAME OVER !!
+        <span class="overlay-text-small">Click to Restart</span>
+    </div>
+    <div id="victory-text" class="overlay-text">
+        VICTORY !!
+        <span class="overlay-text-small">Click to Restart</span>
+    </div>
+    <div class="game-container">
+        <div class="game-info-container">
+            <div class="game-info">
+                Time: <span id="countDown">30</span>
+            </div>
+            <div class="game-info">
+                Flips <span id="flips">0</span>
+            </div>
+        </div>
+
+        <section class="memory-game">
+            <div class="memory-card" data-framework="cactus">
+                <img class="front-face" src="Images/cactus.svg" alt="cactus" />"
+                <img class="back-face" src="Images/anemone.svg" alt="anemone" />
+            </div>
+            <div class="memory-card" data-framework="cactus">
+                <img class="front-face" src="Images/cactus.svg" alt="cactus" />"
+                <img class="back-face" src="Images/anemone.svg" alt="anemone" />
+            </div>
+
+            <div class="memory-card" data-framework="dahlia">
+                <img class="front-face" src="Images/dahlia.svg" alt="dahlia" />"
+                <img class="back-face" src="Images/anemone.svg" alt="anemone" />
+            </div>
+            <div class="memory-card" data-framework="dahlia">
+                <img class="front-face" src="Images/dahlia.svg" alt="dahlia" />"
+                <img class="back-face" src="Images/anemone.svg" alt="anemone" />
+            </div>
+
+            <div class="memory-card" data-framework="garlic-mustard">
+                <img class="front-face" src="Images/garlic-mustard.svg" alt="garlic-mustard" />"
+                <img class="back-face" src="Images/anemone.svg" alt="anemone" />
+            </div>
+            <div class="memory-card" data-framework="garlic-mustard">
+                <img class="front-face" src="Images/garlic-mustard.svg" alt="garlic-mustard" />"
+                <img class="back-face" src="Images/anemone.svg" alt="anemone" />
+            </div>
+
+            <div class="memory-card" data-framework="iris">
+                <img class="front-face" src="Images/iris.svg" alt="iris" />"
+                <img class="back-face" src="Images/anemone.svg" alt="anemone" />
+            </div>
+            <div class="memory-card" data-framework="iris">
+                <img class="front-face" src="Images/iris.svg" alt="iris" />"
+                <img class="back-face" src="Images/anemone.svg" alt="anemone" />
+            </div>
+
+            <div class="memory-card" data-framework="pea">
+                <img class="front-face" src="Images/pea.svg" alt="pea" />"
+                <img class="back-face" src="Images/anemone.svg" alt="anemone" />
+            </div>
+            <div class="memory-card" data-framework="pea">
+                <img class="front-face" src="Images/pea.svg" alt="pea" />"
+                <img class="back-face" src="Images/anemone.svg" alt="anemone" />
+            </div>
+
+            <div class="memory-card" data-framework="sunflower">
+                <img class="front-face" src="Images/sunflower.svg" alt="sunflower" />"
+                <img class="back-face" src="Images/anemone.svg" alt="anemone" />
+            </div>
+            <div class="memory-card" data-framework="sunflower">
+                <img class="front-face" src="Images/sunflower.svg" alt="sunflower" />"
+                <img class="back-face" src="Images/anemone.svg" alt="anemone" />
+            </div>
+        </section>
+    </div>
+    <script src="JavaScript.js"></script>
+
+</body>
+</html>
