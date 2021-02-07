@@ -20,7 +20,7 @@ body {
     color: #583d72;
     font-weight: normal;
     text-align: center;
-    font-size: 6em;
+    font-size: 4em;
     text-shadow: 5px 5px rgba(0,0,0,.7)
 }
 
@@ -32,7 +32,7 @@ body {
 
 .game-info {
     color: #583d72;
-    font-size: 4em;
+    font-size: 3em;
     text-shadow: 3px 3px rgba(0,0,0,.7)
 }
 
